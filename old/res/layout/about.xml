@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/game_option_screen"
+    android:orientation="vertical" >
+
+    <TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:text="JUSTYNAS CHRISTMAS CHAOS v1.3"       
+        />
+    
+    <TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:gravity="center_horizontal"
+        android:text="Kasper Studios 2013"       
+        />
+    
+    <TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="..."       
+        />
+    
+    <TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="Made for my darling Justyna...                   "       
+        />
+    
+    
+    
+    <TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="             ...Merry Christmas"       
+        />
+
+    <TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="..."       
+        />
+    
+    <TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="..."       
+        />
+    
+   	<TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="CREDITS"       
+        />
+   	
+   	<TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="..."       
+        />
+   	
+  	<TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:text="Programming: kasper"       
+        />
+  	
+  	<TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:text="Art: kasper"       
+        />
+  	
+  	<TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:text="Music: Ludovico Einaudi - Life - 2013 - In A Time Lapse"       
+        />
+    
+</LinearLayout>

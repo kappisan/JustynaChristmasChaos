@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/game_option_screen"
+    android:orientation="vertical" >
+<!--
+    <TextView 
+        android:id="@+id/textViewHighScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="CURRENT HIGHSCORE = 0"       
+        />
+    
+    <Button
+        android:id="@+id/resetHighScoreButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="RESET HIGHSCORE" />
+-->
+    <CheckBox
+        android:id="@+id/checkBackgroundMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="Background Music" />
+    
+    <CheckBox
+        android:id="@+id/ckeckSounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="Game Sounds" />
+
+</LinearLayout>

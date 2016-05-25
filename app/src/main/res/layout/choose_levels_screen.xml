@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/game_option_screen"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/levelChristmas01Button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="CHRISTMAS" />
+    
+    <Button
+        android:id="@+id/levelShinigami01Button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="SHINIGAMI" />
+
+    <Button
+        android:id="@+id/levelWonderland01Button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="WONDERLAND" />    
+ 
+    <Button
+        android:id="@+id/levelGeek01Button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="GEEK" />     
+    
+ 
+    
+</LinearLayout>

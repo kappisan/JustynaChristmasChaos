@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_options.xml",
+        "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\layout\\game_options.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\layout\\about.xml",
+        "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\layout\\about.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\layout\\choose_levels_screen.xml",
+        "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\layout\\choose_levels_screen.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_splash.xml",
+        "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\layout\\game_splash.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_menu.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\main_menu.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\layout\\kasper_splash.xml",
+        "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\layout\\kasper_splash.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\about.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\about.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\choose_levels_screen.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\choose_levels_screen.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\kasper_splash.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\kasper_splash.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_menu.xml",
+        "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\layout\\main_menu.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_splash.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\game_splash.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_options.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\game_options.xml"
+    }
+]

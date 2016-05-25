@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/game_option_screen"
+    android:orientation="vertical" >
+
+
+    <CheckBox
+        android:id="@+id/checkBackgroundMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="Background Music" />
+    
+    <CheckBox
+        android:id="@+id/ckeckSounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="Game Sounds" />
+
+    <Button
+        android:id="@+id/optionsBackButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+</LinearLayout>

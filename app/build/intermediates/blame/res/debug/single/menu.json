@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\menu\\kasper_splash.xml",
+        "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\menu\\kasper_splash.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\menu\\kasper_splash.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\menu\\kasper_splash.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
+        "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\menu\\main_menu.xml"
+    }
+]

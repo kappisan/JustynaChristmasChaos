@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kappisan.games.justynaadventures"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.kappisan.games.justynaadventures.KasperSplash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kappisan.games.justynaadventures.GameSplash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.soidutsrepsak.games.justynaadventures.GAMESPLASH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kappisan.games.justynaadventures.MainMenu"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.soidutsrepsak.games.justynaadventures.MAINMENU" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kappisan.games.justynaadventures.GameOptions"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.soidutsrepsak.games.justynaadventures.GAMEOPTIONS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kappisan.games.justynaadventures.ChooseLevelsScreen"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.soidutsrepsak.games.justynaadventures.CHOOSELEVELSCREEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name="com.kappisan.games.justynaadventures.About"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.soidutsrepsak.games.justynaadventures.ABOUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.kappisan.games.justynaadventures.MainGameScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.kappisan.games.justynaadventures.BlackHoleGameScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.soidutsrepsak.games.justynaadventures.BLACKHOLEGAMESCREEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+
+
+    
+
+</manifest>
