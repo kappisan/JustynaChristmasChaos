@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
         "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     },

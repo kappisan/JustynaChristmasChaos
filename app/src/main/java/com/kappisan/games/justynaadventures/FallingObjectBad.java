@@ -27,10 +27,7 @@ public class FallingObjectBad extends Activity {
 	float caughtBoxY;
 	int fallSpeed;
 	Random r;
-	
-	int speedMin;
-	int speedMax;
-	
+
 	int drawPresent;
 	boolean caughtBox;
 	boolean goodBox;
