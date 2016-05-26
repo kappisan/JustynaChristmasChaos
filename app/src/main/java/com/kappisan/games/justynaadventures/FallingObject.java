@@ -199,11 +199,11 @@ public class FallingObject extends Activity {
 		return false;
 	}
 	
-	public boolean checkIfGoodCatch() {
-		return goodBox;
+	public boolean checkIfGoodBox() {
+		return this.goodBox;
 	}
 	
 	public int getY() {
-		return boxY;
+		return this.boxY;
 	}
 }

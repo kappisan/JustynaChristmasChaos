@@ -183,7 +183,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 				if(falling[i].getY() > (screenHeight + 245)) { 
 					if(i == 0) { totalFallenBoxes++; }
 					if(falling[i].getCaughtBox()) {
-						if(falling[i].checkIfGoodCatch()) {
+						if(falling[i].checkIfGoodBox()) {
 							score++;
 							goodCatch.start();
 						} else {
