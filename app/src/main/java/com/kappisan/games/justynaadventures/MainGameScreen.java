@@ -90,14 +90,14 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		
 		tina = new JustynaObject(context, justynaSet);
 		
-		bg = new BackGround(screenWidth, screenHeight, (Activity) context, backgroundSet);
+		bg = new BackGround(screenWidth, screenHeight, context, backgroundSet);
 		
 		falling = new FallingObjectBad[5];
-		falling[0] = new FallingObjectBad(screenWidth, screenHeight, (Activity) context, 20, 0, fallingSet);
-		falling[1] = new FallingObjectBad(screenWidth, screenHeight, (Activity) context, 10, 1, fallingSet);
-		falling[2] = new FallingObjectBad(screenWidth, screenHeight, (Activity) context, 12, 1, fallingSet);
-		falling[3] = new FallingObjectBad(screenWidth, screenHeight, (Activity) context, 14, 1, fallingSet);
-		falling[4] = new FallingObjectBad(screenWidth, screenHeight, (Activity) context, 16, 1, fallingSet);
+		falling[0] = new FallingObjectBad(screenWidth, screenHeight, context, 20, 0, fallingSet);
+		falling[1] = new FallingObjectBad(screenWidth, screenHeight, context, 10, 1, fallingSet);
+		falling[2] = new FallingObjectBad(screenWidth, screenHeight, context, 12, 1, fallingSet);
+		falling[3] = new FallingObjectBad(screenWidth, screenHeight, context, 14, 1, fallingSet);
+		falling[4] = new FallingObjectBad(screenWidth, screenHeight, context, 16, 1, fallingSet);
 		
 		isGameOver = false;
 		
@@ -195,6 +195,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 				}
 			}
 
+			// draw more boxes with time
 			if(totalFallenBoxes > 10) { drawBox2 = true; }
 			if(totalFallenBoxes > 20) { drawBox3 = true; }
 			if(totalFallenBoxes > 40) { drawBox4 = true; }
