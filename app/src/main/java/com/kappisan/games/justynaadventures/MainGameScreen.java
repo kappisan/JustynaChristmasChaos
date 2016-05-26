@@ -170,9 +170,9 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 				
 				
 				Canvas c = holder.lockCanvas();
-				gameLogic();
 				onDraw(c); // this is what is drawn on every refresh of the while loop
 				holder.unlockCanvasAndPost(c);
+				gameLogic();
 				
 			}
 		}
@@ -181,6 +181,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 
 			for(int i = 0; i < 5; i++) {
 				if(falling[i].getY() > (screenHeight + 245)) { // if box falls of the edge of the screen
+
 					if(i == 0) { totalFallenBoxes++; }
 					if(falling[i].getCaughtBox()) {
 						if(falling[i].checkIfGoodBox()) {
@@ -192,6 +193,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 						}
 					}
 					falling[i].resetBox();
+
 				}
 			}
 

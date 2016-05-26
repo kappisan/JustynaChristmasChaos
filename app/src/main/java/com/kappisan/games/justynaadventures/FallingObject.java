@@ -135,7 +135,7 @@ public class FallingObject extends Activity {
 		int drawX;
 		int drawY;
 
-		if(!this.caughtBox) {
+		if(this.caughtBox == false) {
 			if(checkIfCaught(characterX, characterY)) {
 				this.caughtBox = true;
 			}
@@ -184,7 +184,8 @@ public class FallingObject extends Activity {
 	}
 	
 	public boolean checkIfCaught(float characterX, float characterY) {
-		if(this.caughtBox == false && Math.abs(boxY - (screenHeight - 50)) < 20 && Math.abs(boxX - characterX) < 80) {
+		//if(this.caughtBox == false && Math.abs(boxY - (screenHeight - 50)) < 20 && Math.abs(boxX - characterX) < 80) {
+		if(this.caughtBox == false && ((screenHeight - boxY - 50) < 20) && Math.abs(boxX - characterX) < 80 && boxY < (screenHeight + 50)) {
 			this.caughtBox = true;
 			caughtBoxY = characterY;
 			return true;
