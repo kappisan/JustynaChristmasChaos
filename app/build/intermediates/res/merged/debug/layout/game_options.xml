@@ -21,6 +21,12 @@
         android:text="Game Sounds" />
 
     <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/optionsSavebutton" />
+
+    <Button
         android:id="@+id/optionsBackButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

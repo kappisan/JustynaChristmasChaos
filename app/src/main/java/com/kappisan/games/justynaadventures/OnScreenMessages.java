@@ -176,7 +176,7 @@ public class OnScreenMessages extends Activity {
 	
 	public void drawGameOver(Canvas canvas) {
 		canvas.drawBitmap(gameOver,(screenWidth / 2) - (gameOver.getWidth() / 2) , (screenHeight / 2) - (gameOver.getHeight() / 2), null);
-		drawHighScore(canvas);
+		//drawHighScore(canvas);
 	}
 	
 	public void showMessage(Canvas canvas, int showBonus) {
@@ -217,113 +217,7 @@ public class OnScreenMessages extends Activity {
 			canvas.drawBitmap(emptyHeartBar, 170, 30, null);
 		}
 	}
-	
-	public void drawHighScore(Canvas canvas) {
-		/*
-		Paint paint = new Paint(); 
-		
-		// shifts by number of significant figures
-		int shift = String.valueOf(highScore).length();
-		shift *= 50;
-		
-		paint.setColor(Color.BLACK); 
-		paint.setTextSize(90); 
-		canvas.drawText(""+highScore, (screenWidth / 2) - shift, screenHeight / 4, paint); 
-		*/
-		int sf = String.valueOf(highScore).length();
-		
-		int shiftBy = 0;
-		int srcX;
-		int drawFromX = (screenWidth / 2);
 
-		if(sf == 1) {
-			srcX = highScore * 40;	
-			
-			Rect src = new Rect(srcX,0,srcX+40,54);
-			Rect dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-		} else if(sf == 2) {
-			
-			// tens
-			srcX = (highScore / 10) * 40;
-			
-			shiftBy = -50;
-			Rect src = new Rect(srcX,0,srcX+40,54);
-			Rect dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-			
-			// ones
-			srcX = (highScore % 10) * 40;
-			
-			shiftBy = 0;
-			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-		} else if(sf == 3) {
-			// hundreds
-			srcX = (highScore / 100) * 40;
-			
-			shiftBy = -100;
-			Rect src = new Rect(srcX,0,srcX+40,54);
-			Rect dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-			
-			// tens
-			srcX /= 40;
-			srcX = highScore - (srcX * 100);
-			srcX = (srcX / 10) * 40;
-			
-			shiftBy = -50;
-			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-			
-			// ones
-			srcX = (highScore % 10) * 40;
-			
-			shiftBy = 0;
-			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-		} else {
-			// thousands
-			srcX = (highScore / 1000) * 40;
-			
-			shiftBy = -150;
-			Rect src = new Rect(srcX,0,srcX+40,54);
-			Rect dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-			
-			// hundreds
-			srcX /= 40;
-			srcX = highScore - (srcX * 1000);
-			srcX = (srcX / 100) * 40;
-			
-			shiftBy = -100;
-			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-			
-			// tens
-			srcX /= 40;
-			srcX = (highScore % 1000) - (srcX * 100);
-			srcX = (srcX / 10) * 40;
-			
-			shiftBy = -50;
-			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-			
-			// ones
-			srcX = (highScore % 10) * 40;
-			
-			shiftBy = 0;
-			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
-			canvas.drawBitmap(numbersGreen, src, dst, null);
-		}
-	}
-	
 	public int getHighScore(Context context) {
 		
 		try {

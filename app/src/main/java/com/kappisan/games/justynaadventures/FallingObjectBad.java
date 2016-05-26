@@ -21,7 +21,6 @@ public class FallingObjectBad extends Activity {
 	int screenHeight;
 	int scaleBy;
 	Bitmap box1, box2, box3, box4, badBox1, badBox2, badBox3;
-	MediaPlayer goodCatch, badCatch;
 	
 	int boxX, boxY;
 	float caughtBoxY;
@@ -93,8 +92,6 @@ public class FallingObjectBad extends Activity {
 		r = new Random();
 		
 		fallSpeed = speed;
-
-		//goodCatch = MediaPlayer.create(this, R.raw.catch_good);
 		
 		if(boxSet == 0) {
 			drawPresent = r.nextInt(7);	
