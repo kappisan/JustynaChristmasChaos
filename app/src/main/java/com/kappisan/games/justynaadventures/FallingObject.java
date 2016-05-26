@@ -103,7 +103,7 @@ public class FallingObject extends Activity {
 		setBoxGoodness();
 		boxX = r.nextInt(screenWidth - 50) + 25;
 		boxY = -300;
-		caughtBox = false;
+		this.caughtBox = false;
 		presentFell = false;
 	}
 	
@@ -139,13 +139,13 @@ public class FallingObject extends Activity {
 		int drawX;
 		int drawY;
 
-		if(!caughtBox) {
+		if(!this.caughtBox) {
 			if(checkIfCaught(characterX, characterY)) {
-				caughtBox = true;
+				this.caughtBox = true;
 			}
 		}
 		
-		if(caughtBox) {
+		if(this.caughtBox) {
 			drawX = characterX - (box1.getWidth() / 2);
 			drawY = (int) caughtBoxY;
 		} else {
@@ -171,8 +171,8 @@ public class FallingObject extends Activity {
 	}
 	
 	public void resetBox() {
-		caughtBox = false;
-		if(!caughtBox) {
+		this.caughtBox = false;
+		if(!this.caughtBox) {
 			presentFell = true;
 		}
 		
@@ -187,12 +187,12 @@ public class FallingObject extends Activity {
 	}
 	
 	public boolean getCaughtBox() {
-		return caughtBox;
+		return this.caughtBox;
 	}
 	
 	public boolean checkIfCaught(float characterX, float characterY) {
-		if(caughtBox == false && Math.abs(boxY - (screenHeight - 50)) < 20 && Math.abs(boxX - characterX) < 80) {
-			caughtBox = true;
+		if(this.caughtBox == false && Math.abs(boxY - (screenHeight - 50)) < 20 && Math.abs(boxX - characterX) < 80) {
+			this.caughtBox = true;
 			caughtBoxY = characterY;
 			return true;
 		}
