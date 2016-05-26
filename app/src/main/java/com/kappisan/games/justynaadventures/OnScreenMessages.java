@@ -21,7 +21,6 @@ public class OnScreenMessages extends Activity {
 	int screenWidth;
 	int screenHeight;
 	int scaleBy;
-	int highScore;
 	boolean showMessage;
 	int showMessageTime;
 	
@@ -29,12 +28,9 @@ public class OnScreenMessages extends Activity {
 		screenWidth = x;
 		screenHeight = y;
 		scaleBy = screenHeight/1280;
-		highScore = getHighScore(context);
 		showMessage = false;
 		showMessageTime = 0;
-		
-		//setHighScore("" + 123, context);
-		
+
 		
 		// get bitmaps
 		//**************************************************************************			
@@ -176,7 +172,6 @@ public class OnScreenMessages extends Activity {
 	
 	public void drawGameOver(Canvas canvas) {
 		canvas.drawBitmap(gameOver,(screenWidth / 2) - (gameOver.getWidth() / 2) , (screenHeight / 2) - (gameOver.getHeight() / 2), null);
-		//drawHighScore(canvas);
 	}
 	
 	public void showMessage(Canvas canvas, int showBonus) {
@@ -218,33 +213,4 @@ public class OnScreenMessages extends Activity {
 		}
 	}
 
-	public int getHighScore(Context context) {
-		
-		try {
-			Resources res = context.getResources();
-			InputStream inS = res.openRawResource(R.raw.game_data);
-			
-			byte[] b = new byte[inS.available()];
-			inS.read(b);
-			return Integer.parseInt(new String(b));
-			
-		} catch(Exception e) {}
-		
-		return 0;
-		
-		
-	}
-	
-	public void setHighScore(String in, Context context) {
-		
-        
-        try {
-    		FileOutputStream fos = context.openFileOutput("game_data.txt", this.MODE_PRIVATE);
-    		//fos = (FileOutputStream) context.getResources().openRawResource(R.raw.game_data);
-		    fos.write(in.getBytes());
-		    fos.close();
-        } catch (IOException e) {
-           //Log.e("Controller", e.getMessage() + e.getLocalizedMessage() + e.getCause());
-       }
-	}
 }
