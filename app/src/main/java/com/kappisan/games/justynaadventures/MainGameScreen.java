@@ -180,7 +180,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		public void gameLogic() {
 
 			for(int i = 0; i < 5; i++) {
-				if(falling[i].getY() > (screenHeight + 245)) { 
+				if(falling[i].getY() > (screenHeight + 245)) { // if box falls of the edge of the screen
 					if(i == 0) { totalFallenBoxes++; }
 					if(falling[i].getCaughtBox()) {
 						if(falling[i].checkIfGoodBox()) {
@@ -191,7 +191,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 							badCatch.start();
 						}
 					}
-					falling[i].resetBox(); 
+					falling[i].resetBox();
 				}
 			}
 

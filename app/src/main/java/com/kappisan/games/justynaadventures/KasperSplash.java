@@ -14,7 +14,7 @@ public class KasperSplash extends Activity {
 			@Override
 			public void run() {
 				try {
-					sleep(500);
+					sleep(1000);
 					Intent menuIntent = new Intent("com.soidutsrepsak.games.justynaadventures.GAMESPLASH");
 					startActivity(menuIntent);
 				} catch(InterruptedException e) {

@@ -31,7 +31,6 @@ public class FallingObject extends Activity {
 	boolean caughtBox;
 	boolean goodBox;
 	int boxSet;
-	boolean presentFell;
 	
 	public FallingObject(int x, int y, Context context, int speed, int boxClass, int set) {
 		screenWidth = x;
@@ -104,7 +103,6 @@ public class FallingObject extends Activity {
 		boxX = r.nextInt(screenWidth - 50) + 25;
 		boxY = -300;
 		this.caughtBox = false;
-		presentFell = false;
 	}
 	
 	public void setBoxGoodness() {
@@ -132,8 +130,6 @@ public class FallingObject extends Activity {
 	
 	public void drawBox(Canvas canvas, int characterX, int characterY) {
 
-		presentFell = false;
-		
 		boxY += fallSpeed;
 		
 		int drawX;
@@ -172,9 +168,6 @@ public class FallingObject extends Activity {
 	
 	public void resetBox() {
 		this.caughtBox = false;
-		if(!this.caughtBox) {
-			presentFell = true;
-		}
 		
 		boxX = r.nextInt(screenWidth - 50) + 25;
 		boxY = -30;
