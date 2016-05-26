@@ -35,7 +35,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 	OurView v;
 	BackGround bg;
 	OnScreenMessages osm;
-	FallingObjectBad[] falling;
+	FallingObject[] falling;
 	JustynaObject tina;
 
 	boolean isGameOver;
@@ -75,7 +75,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		scaleBy = screenHeight/1280;
 		Context context = this;
 
-		osm = new OnScreenMessages(screenWidth, screenHeight, (Activity) context);
+		osm = new OnScreenMessages(screenWidth, screenHeight, context);
 		
 		
 		int justynaSet = 0;
@@ -92,12 +92,12 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		
 		bg = new BackGround(screenWidth, screenHeight, context, backgroundSet);
 		
-		falling = new FallingObjectBad[5];
-		falling[0] = new FallingObjectBad(screenWidth, screenHeight, context, 20, 0, fallingSet);
-		falling[1] = new FallingObjectBad(screenWidth, screenHeight, context, 10, 1, fallingSet);
-		falling[2] = new FallingObjectBad(screenWidth, screenHeight, context, 12, 1, fallingSet);
-		falling[3] = new FallingObjectBad(screenWidth, screenHeight, context, 14, 1, fallingSet);
-		falling[4] = new FallingObjectBad(screenWidth, screenHeight, context, 16, 1, fallingSet);
+		falling = new FallingObject[5];
+		falling[0] = new FallingObject(screenWidth, screenHeight, context, 20, 0, fallingSet);
+		falling[1] = new FallingObject(screenWidth, screenHeight, context, 10, 1, fallingSet);
+		falling[2] = new FallingObject(screenWidth, screenHeight, context, 12, 1, fallingSet);
+		falling[3] = new FallingObject(screenWidth, screenHeight, context, 14, 1, fallingSet);
+		falling[4] = new FallingObject(screenWidth, screenHeight, context, 16, 1, fallingSet);
 		
 		isGameOver = false;
 		

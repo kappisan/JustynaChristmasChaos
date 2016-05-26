@@ -10,7 +10,7 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.media.MediaPlayer;
 
-public class FallingObjectBad extends Activity {
+public class FallingObject extends Activity {
 
 	//BOX CLASSES
 	//0 = mix
@@ -33,7 +33,7 @@ public class FallingObjectBad extends Activity {
 	int boxSet;
 	boolean presentFell;
 	
-	public FallingObjectBad(int x, int y, Context context, int speed, int boxClass, int set) {
+	public FallingObject(int x, int y, Context context, int speed, int boxClass, int set) {
 		screenWidth = x;
 		screenHeight = y;
 		scaleBy = screenHeight/1280;
@@ -67,7 +67,7 @@ public class FallingObjectBad extends Activity {
 			badBox1 = BitmapFactory.decodeResource(context.getResources(), R.drawable.fish_skeleton);
 			badBox2 = BitmapFactory.decodeResource(context.getResources(), R.drawable.poison_bottle_green);
 			badBox3 = BitmapFactory.decodeResource(context.getResources(), R.drawable.poison_bottle_purple);
-		}else {
+		} else {
 			// get bitmaps
 			//**************************************************************************
 			box1 = BitmapFactory.decodeResource(context.getResources(), R.drawable.present_blue_yellow);
@@ -188,10 +188,6 @@ public class FallingObjectBad extends Activity {
 	
 	public boolean getCaughtBox() {
 		return caughtBox;
-	}
-	
-	public boolean checkIfPresentFell() {
-		return presentFell;
 	}
 	
 	public boolean checkIfCaught(float characterX, float characterY) {
