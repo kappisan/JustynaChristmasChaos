@@ -8,38 +8,59 @@
     <Button
         android:id="@+id/newGameButton"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="PLAY"
-        android:layout_below="@+id/chooseLevelButton"
-        android:layout_centerHorizontal="true"
-        android:textColor="#222222" />
+        android:textColor="#ffffff"
+        android:background="#a10023"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_above="@+id/chooseLevelButton"
+        android:layout_alignLeft="@+id/chooseLevelButton"
+        android:layout_alignStart="@+id/chooseLevelButton"
+        android:layout_marginBottom="17dp" />
 
     <Button
         android:id="@+id/chooseLevelButton"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="LEVELS"
-        android:layout_marginTop="216dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#222222" />
+        android:textColor="#ffffff"
+        android:background="#a10023"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_above="@+id/gameOptionsButton"
+        android:layout_alignLeft="@+id/gameOptionsButton"
+        android:layout_alignStart="@+id/gameOptionsButton"
+        android:layout_marginBottom="17dp" />
 
     <Button
         android:id="@+id/gameOptionsButton"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="OPTIONS"
-        android:layout_below="@+id/newGameButton"
+        android:textColor="#ffffff"
+        android:background="#a10023"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_above="@+id/aboutButton"
         android:layout_centerHorizontal="true"
-        android:textColor="#222222" />
+        android:layout_marginBottom="18dp" />
 
     <Button
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="ABOUT"
         android:id="@+id/aboutButton"
-        android:layout_below="@+id/gameOptionsButton"
+        android:textColor="#ffffff"
+        android:background="#a10023"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#222222" />
+        android:layout_marginBottom="19dp" />
 
 </RelativeLayout>

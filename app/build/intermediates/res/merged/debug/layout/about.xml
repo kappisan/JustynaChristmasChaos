@@ -111,5 +111,13 @@
         android:textColor="@color/green"
         android:text="Soundtrack: kappisan"
         />
-    
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="copyright kappisan 2013 - 2016"
+        android:id="@+id/textView"
+        android:gravity="bottom"
+        android:textColor="#191919" />
+
 </LinearLayout>

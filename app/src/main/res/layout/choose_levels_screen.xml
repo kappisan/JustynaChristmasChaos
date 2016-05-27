@@ -4,34 +4,54 @@
     android:background="@drawable/game_option_screen"
     android:orientation="vertical" >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select Level"
+        android:id="@+id/textLevelSelect"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:textSize="44dp"
+        android:layout_marginTop="10dp"
+        android:typeface="monospace" />
+
     <Button
         android:id="@+id/levelWonderland01Button"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="WONDERLAND"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="50dp"
+        android:background="#ce73ff"
+        android:typeface="monospace" />
  
     <Button
         android:id="@+id/levelGeek01Button"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="GEEK"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="#59d8ff"
+        android:typeface="monospace" />
 
     <Button
         android:id="@+id/levelShinigami01Button"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="SHINIGAMI"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="#ffaf81"
+        android:typeface="monospace" />
 
     <Button
         android:id="@+id/levelChristmas01Button"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="CHRISTMAS"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="#65ff8b"
+        android:typeface="monospace" />
 
 
 </LinearLayout>
