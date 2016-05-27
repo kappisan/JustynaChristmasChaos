@@ -90,10 +90,10 @@ public final class R {
         public static final int ckeckSounds=0x7f0a0006;
         public static final int gameOptionsButton=0x7f0a000c;
         public static final int imageView1=0x7f0a0009;
-        public static final int levelChristmas01Button=0x7f0a0001;
-        public static final int levelGeek01Button=0x7f0a0004;
-        public static final int levelShinigami01Button=0x7f0a0002;
-        public static final int levelWonderland01Button=0x7f0a0003;
+        public static final int levelChristmas01Button=0x7f0a0004;
+        public static final int levelGeek01Button=0x7f0a0002;
+        public static final int levelShinigami01Button=0x7f0a0003;
+        public static final int levelWonderland01Button=0x7f0a0001;
         public static final int menuShowAbout=0x7f0a000f;
         public static final int newGameButton=0x7f0a000a;
         public static final int optionsBackButton=0x7f0a0008;

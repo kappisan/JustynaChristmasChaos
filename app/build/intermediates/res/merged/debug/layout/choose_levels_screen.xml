@@ -5,29 +5,33 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/levelChristmas01Button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="CHRISTMAS" />
-    
-    <Button
-        android:id="@+id/levelShinigami01Button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="SHINIGAMI" />
-
-    <Button
         android:id="@+id/levelWonderland01Button"
-        android:layout_width="fill_parent"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:text="WONDERLAND" />    
+        android:text="WONDERLAND"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp" />
  
     <Button
         android:id="@+id/levelGeek01Button"
-        android:layout_width="fill_parent"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:text="GEEK" />     
-    
- 
-    
+        android:text="GEEK"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/levelShinigami01Button"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:text="SHINIGAMI"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/levelChristmas01Button"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:text="CHRISTMAS"
+        android:layout_gravity="center_horizontal" />
+
+
 </LinearLayout>

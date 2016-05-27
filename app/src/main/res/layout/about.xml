@@ -12,7 +12,7 @@
         android:textColor="@color/red"
         android:gravity="center_horizontal"
         android:textStyle="bold"
-        android:text="JUSTYNAS CHRISTMAS CHAOS v1.3"       
+        android:text="JUSTYNAS CHRISTMAS CHAOS"
         />
     
     <TextView 
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/red"
         android:gravity="center_horizontal"
-        android:text="Kasper Studios 2013"       
+        android:text="kappisan 2016"
         />
     
     <TextView 
@@ -40,7 +40,7 @@
         android:textStyle="italic"
         android:fontFamily="sans-serif-light"
         android:gravity="center_horizontal"
-        android:text="Made for my darling Justyna...                   "       
+        android:text="for my darling Justyna...                   "
         />
     
     
@@ -93,7 +93,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/green"
-        android:text="Programming: kasper"       
+        android:text="Programming: kappisan"
         />
   	
   	<TextView 
@@ -101,7 +101,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/green"
-        android:text="Art: kasper"       
+        android:text="Art: kappisan"
         />
   	
   	<TextView 
@@ -109,7 +109,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/green"
-        android:text="Music: Ludovico Einaudi - Life - 2013 - In A Time Lapse"       
+        android:text="Soundtrack: kappisan"
         />
     
 </LinearLayout>

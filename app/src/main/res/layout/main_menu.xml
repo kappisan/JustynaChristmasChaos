@@ -7,38 +7,39 @@
 
     <Button
         android:id="@+id/newGameButton"
-        android:layout_width="fill_parent"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:text="PLAY"
         android:layout_below="@+id/chooseLevelButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#222222" />
 
     <Button
         android:id="@+id/chooseLevelButton"
-        android:layout_width="fill_parent"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:text="LEVELS"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="216dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#222222" />
 
     <Button
         android:id="@+id/gameOptionsButton"
-        android:layout_width="fill_parent"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:text="OPTIONS"
         android:layout_below="@+id/newGameButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#222222" />
 
     <Button
-        android:layout_width="fill_parent"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:text="ABOUT"
         android:id="@+id/aboutButton"
         android:layout_below="@+id/gameOptionsButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#222222" />
 
 </RelativeLayout>
