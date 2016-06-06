@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainMenu extends Activity {
 
@@ -27,40 +28,76 @@ public class MainMenu extends Activity {
 		Button buttonNew = (Button) findViewById(R.id.newGameButton);
 		Button buttonOptions = (Button) findViewById(R.id.gameOptionsButton);
 		Button buttonAbout = (Button) findViewById(R.id.aboutButton);
+
+		ImageButton playPresentButton = (ImageButton) findViewById(R.id.playPresentButton);
+		ImageButton levelsPresentButton = (ImageButton) findViewById(R.id.levelsPresentButton);
+		ImageButton optionsPresentButton = (ImageButton) findViewById(R.id.optionsPresentButton);
+		ImageButton aboutPresentButton = (ImageButton) findViewById(R.id.aboutPresentButton);
 		
 		buttonLevels.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
-			public void onClick(View v) {
-
-				startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.CHOOSELEVELSCREEN"));
+			public void onClick(View v) {	startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.CHOOSELEVELSCREEN"));
 			}
 		});
 		
 		buttonNew.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
-			public void onClick(View v) {
-
-				startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN"));
+			public void onClick(View v) {startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN"));
 			}
 		});
 		
 		buttonOptions.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
-			public void onClick(View v) {
-
-				startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.GAMEOPTIONS"));
+			public void onClick(View v) {startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.GAMEOPTIONS"));
 			}
 		});
 
 		buttonAbout.setOnClickListener(new View.OnClickListener() {
 
 			@Override
-			public void onClick(View v) {
+			public void onClick(View v) {startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.ABOUT"));
+			}
+		});
 
-				startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.ABOUT"));
+
+
+
+
+
+
+
+
+
+
+
+		levelsPresentButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {	startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.CHOOSELEVELSCREEN"));
+			}
+		});
+
+		playPresentButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN"));
+			}
+		});
+
+		optionsPresentButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.GAMEOPTIONS"));
+			}
+		});
+
+		aboutPresentButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.ABOUT"));
 			}
 		});
 

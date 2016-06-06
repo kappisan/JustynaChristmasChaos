@@ -1,3 +1,5 @@
+// Object that fall, can be presents or harmful
+
 package com.kappisan.games.justynaadventures;
 
 import java.util.Random;
@@ -12,10 +14,7 @@ import android.media.MediaPlayer;
 
 public class FallingObject extends Activity {
 
-	//BOX CLASSES
-	//0 = mix
-	//1 = bad
-	//2 = good
+	// BOX CLASSES: 0 = mix, 1 = bad, 2 = good
 	
 	int screenWidth;
 	int screenHeight;
@@ -30,6 +29,7 @@ public class FallingObject extends Activity {
 	int drawPresent;
 	boolean caughtBox;
 	boolean goodBox;
+	private boolean inPlay;
 	int boxSet;
 	
 	public FallingObject(int x, int y, Context context, int speed, int boxClass, int set) {
@@ -37,6 +37,7 @@ public class FallingObject extends Activity {
 		screenHeight = y;
 		scaleBy = screenHeight/1280;
 		boxSet = boxClass;
+		inPlay = false;
 
 		// presents
 		if(set == 1) {
@@ -112,6 +113,20 @@ public class FallingObject extends Activity {
 			goodBox = false;
 		}
 	}
+
+	public void setInPlay() {
+		this.inPlay = true;
+	}
+
+	public void setNotInPlay() {
+		this.inPlay = false;
+	}
+
+	// check if this falling object is in play
+	public boolean isInPlay() {
+		return this.inPlay;
+	}
+
 	
 	public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
 	    int width = bm.getWidth();

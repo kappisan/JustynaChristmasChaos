@@ -18,6 +18,7 @@ public class OnScreenMessages extends Activity {
 	Bitmap scoreTimes2, scoreTimes3, scoreTimes5, gameOver;
 	Bitmap heartBar, emptyHeartBar;
 	Bitmap numbersRed, numbersGreen;
+	Bitmap playAgain;
 	int screenWidth;
 	int screenHeight;
 	int scaleBy;
@@ -38,6 +39,8 @@ public class OnScreenMessages extends Activity {
 		emptyHeartBar = BitmapFactory.decodeResource(context.getResources(), R.drawable.health_bar_heart_empty);
 		numbersRed = BitmapFactory.decodeResource(context.getResources(), R.drawable.numbers_red);
 		numbersGreen = BitmapFactory.decodeResource(context.getResources(), R.drawable.numbers_green);
+
+		playAgain = BitmapFactory.decodeResource(context.getResources(), R.drawable.play_again);
 		
 		scoreTimes2 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_2_bonus);
 		scoreTimes3 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_3_bonus);
@@ -51,11 +54,6 @@ public class OnScreenMessages extends Activity {
 		
 		numbersRed = getResizedBitmap(numbersRed,54,400);
 		numbersGreen = getResizedBitmap(numbersGreen,54,400);	
-	}
-	
-	public void displayMessage() {
-		showMessage = true;
-		showMessageTime = 100;
 	}
 	
 	public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
@@ -74,19 +72,18 @@ public class OnScreenMessages extends Activity {
 	}
 	
 	
-	public void drawScore(Canvas canvas, int score) {
+	public void drawScore(Canvas canvas, int score, int xPos, int yPos) {
 		
 		int sf = String.valueOf(score).length();
 		
 		int shiftBy = 0;
 		int srcX;
-		int drawFromX = screenWidth - 80;
 
 		if(sf == 1) {
 			srcX = score * 40;	
 			
 			Rect src = new Rect(srcX,0,srcX+40,54);
-			Rect dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			Rect dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 		} else if(sf == 2) {
 			
@@ -95,7 +92,7 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = -50;
 			Rect src = new Rect(srcX,0,srcX+40,54);
-			Rect dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			Rect dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 			
 			// ones
@@ -103,7 +100,7 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = 0;
 			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 		} else if(sf == 3) {
 			// hundreds
@@ -111,7 +108,7 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = -100;
 			Rect src = new Rect(srcX,0,srcX+40,54);
-			Rect dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			Rect dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 			
 			// tens
@@ -121,7 +118,7 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = -50;
 			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 			
 			// ones
@@ -129,7 +126,7 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = 0;
 			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 		} else {
 			// thousands
@@ -137,7 +134,7 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = -150;
 			Rect src = new Rect(srcX,0,srcX+40,54);
-			Rect dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			Rect dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 			
 			// hundreds
@@ -147,7 +144,7 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = -100;
 			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 			
 			// tens
@@ -157,7 +154,7 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = -50;
 			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 			
 			// ones
@@ -165,29 +162,15 @@ public class OnScreenMessages extends Activity {
 			
 			shiftBy = 0;
 			src = new Rect(srcX,0,srcX+40,54);
-			dst = new Rect(drawFromX+shiftBy,50,drawFromX+40+shiftBy,104);
+			dst = new Rect(xPos+shiftBy,50,xPos+40+shiftBy,yPos);
 			canvas.drawBitmap(numbersRed, src, dst, null);
 		}
 	}
 	
 	public void drawGameOver(Canvas canvas) {
-		canvas.drawBitmap(gameOver,(screenWidth / 2) - (gameOver.getWidth() / 2) , (screenHeight / 2) - (gameOver.getHeight() / 2), null);
-	}
-	
-	public void showMessage(Canvas canvas, int showBonus) {
-		if(showMessage) {
-			if(showBonus == 2) {
-				canvas.drawBitmap(scoreTimes2,(screenWidth / 2) - (scoreTimes2.getWidth() / 2) , (screenHeight / 4) - (scoreTimes2.getHeight() / 2), null);
-			} else if(showBonus == 3) {
-				canvas.drawBitmap(scoreTimes3,(screenWidth / 2) - (scoreTimes3.getWidth() / 2) , (screenHeight / 4) - (scoreTimes3.getHeight() / 2), null);
-			} else if(showBonus == 5) {
-				canvas.drawBitmap(scoreTimes5,(screenWidth / 2) - (scoreTimes5.getWidth() / 2) , (screenHeight / 4) - (scoreTimes5.getHeight() / 2), null);
-			}
-			showMessageTime--;
-			if(showMessageTime < 0) {
-				showMessage = false;
-			}
-		}
+		canvas.drawBitmap(gameOver,(screenWidth / 2) - (gameOver.getWidth() / 2) , (screenHeight / 4) - (gameOver.getHeight() / 2), null);
+
+		canvas.drawBitmap(playAgain,(screenWidth / 2) - (playAgain.getWidth() / 2) , (screenHeight / 2) - (playAgain.getHeight() / 2), null);
 	}
 	
 	public void drawHealth(Canvas canvas, int health) {

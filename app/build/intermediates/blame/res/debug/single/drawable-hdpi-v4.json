@@ -232,6 +232,10 @@
         "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\drawable-hdpi\\christmas_background_06.png"
     },
     {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\game_splash_screen_2.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\game_splash_screen_2.png"
+    },
+    {
         "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
         "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
@@ -242,6 +246,10 @@
     {
         "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\wonder_land_01.png",
         "source": "E:\\kappisan\\JustynaAdventures\\app\\src\\main\\res\\drawable-hdpi\\wonder_land_01.png"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\game_splash_screen_3.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\game_splash_screen_3.png"
     },
     {
         "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\health_bar_heart.png",
@@ -374,6 +382,10 @@
     {
         "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\wrist_watch.png",
         "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\drawable-hdpi\\wrist_watch.png"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\game_logo.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\game_logo.png"
     },
     {
         "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\justyna_san_left_edit.png",
@@ -540,6 +552,10 @@
         "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\drawable-hdpi\\kasperstudios.png"
     },
     {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\library_background.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\library_background.png"
+    },
+    {
         "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\christmas_background_05.png",
         "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\christmas_background_05.png"
     },
@@ -586,6 +602,10 @@
     {
         "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\times_2_bonus.png",
         "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\drawable-hdpi\\times_2_bonus.png"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\play_again.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\play_again.png"
     },
     {
         "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gothic_background_01.png",
@@ -654,6 +674,10 @@
     {
         "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\kasperstudios.png",
         "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\kasperstudios.png"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\justyna_blue_jumper_christmas_tounge.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-hdpi\\justyna_blue_jumper_christmas_tounge.png"
     },
     {
         "merged": "E:\\kappisan\\JustynaAdventures\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\present_blue_red.png",

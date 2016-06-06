@@ -25,8 +25,8 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 	int PLAYER_NORMAL = 0;
 	int PLAYER_LEFT = 1;
 	int PLAYER_RIGHT = 2;
-	int PLAYER_CAUGHT = 3;
-	int PLAYER_CAUGHT_BAD = 4;
+
+	int MAX_BOXES = 10; // the max number of falling objects
 	
 	int screenWidth;
 	int screenHeight;
@@ -37,9 +37,10 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 	OnScreenMessages osm;
 	FallingObject[] falling;
 	JustynaObject tina;
+	FallingBonus fallingBonus;
 
 	boolean isGameOver;
-	int showBonus; // used to determine which bonus to show
+
 	int scoreMultiplierBonus;
 	int totalFallenBoxes;
 	
@@ -54,12 +55,17 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 	
 	boolean caughtBox;
 	boolean caughtGood;
-	boolean drawBox2, drawBox3, drawBox4, drawBox5;
 	
 	MediaPlayer goodCatch, badCatch, scoreMultiplier, presentFall;
 	
 	Random r = new Random();
-	
+
+	int justynaSet = 0;
+	int backgroundSet = 0;
+	int fallingSet = 0;
+
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -78,9 +84,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		osm = new OnScreenMessages(screenWidth, screenHeight, context);
 		
 		
-		int justynaSet = 0;
-		int backgroundSet = 0;
-		int fallingSet = 0;
+
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
 			justynaSet = extras.getInt("justyna");
@@ -89,19 +93,19 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		}
 		
 		tina = new JustynaObject(context, justynaSet);
-		
 		bg = new BackGround(screenWidth, screenHeight, context, backgroundSet);
 		
-		falling = new FallingObject[5];
-		falling[0] = new FallingObject(screenWidth, screenHeight, context, 20, 0, fallingSet);
-		falling[1] = new FallingObject(screenWidth, screenHeight, context, 10, 1, fallingSet);
-		falling[2] = new FallingObject(screenWidth, screenHeight, context, 12, 1, fallingSet);
-		falling[3] = new FallingObject(screenWidth, screenHeight, context, 14, 1, fallingSet);
-		falling[4] = new FallingObject(screenWidth, screenHeight, context, 16, 1, fallingSet);
-		
+		falling = new FallingObject[MAX_BOXES]; // allocate array of falling objects
+		fallingBonus = new FallingBonus(screenWidth, screenHeight, context, 14, 0, fallingSet);
+
+		for(int i = 0; i < MAX_BOXES; i++) { falling[i] = new FallingObject(screenWidth, screenHeight, context, 14 + i, 0, fallingSet); }
+
+		falling[0].setInPlay(); // start with one falling object
+
+
+
 		isGameOver = false;
-		
-		showBonus = 0;
+
 		totalFallenBoxes = 0;
 		characterX = screenWidth / 2;
 		characterY = screenHeight - (screenHeight / 6);
@@ -116,10 +120,6 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		isMoving = false;
 		caughtBox = false;
 		caughtGood = true;
-		drawBox2 = false;
-		drawBox3 = false;
-		drawBox4 = false;
-		drawBox5 = false;
 		
 		score = 0;
 		health = 3;
@@ -167,41 +167,55 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 				if(!holder.getSurface().isValid()) {
 					continue;
 				}
-				
+
 				
 				Canvas c = holder.lockCanvas();
 				onDraw(c); // this is what is drawn on every refresh of the while loop
 				holder.unlockCanvasAndPost(c);
 				gameLogic();
-				
+
 			}
 		}
 		
 		public void gameLogic() {
 
-			for(int i = 0; i < 5; i++) {
-				if(falling[i].getY() > (screenHeight + 245)) { // if box falls of the edge of the screen
+			if((totalFallenBoxes % 15) + 6 == 14) {
+				fallingBonus.setInPlay();
+			}
 
-					if(i == 0) { totalFallenBoxes++; }
-					if(falling[i].getCaughtBox()) {
-						if(falling[i].checkIfGoodBox()) {
-							score++;
-							goodCatch.start();
-						} else {
-							health--;
-							badCatch.start();
+			if(fallingBonus.isInPlay()) {
+				if(fallingBonus.getY() > (screenHeight + 3645)) { // the duration of the bonus
+					fallingBonus.setNotInPlay();
+					fallingBonus.resetBox();
+				}
+			} else {
+
+			}
+
+			for(int i = 0; i < MAX_BOXES; i++) {
+				if(falling[i].isInPlay()) {
+					if (falling[i].getY() > (screenHeight + 245)) { // if box falls of the edge of the screen
+
+						if (i == 0) {
+							totalFallenBoxes++;
 						}
-					}
-					falling[i].resetBox();
+						if (falling[i].getCaughtBox()) {
+							if (falling[i].checkIfGoodBox()) {
+								score = score + fallingBonus.getMultiplier();
+								goodCatch.start();
+							} else {
+								health--;
+								badCatch.start();
+							}
+						}
+						falling[i].resetBox();
 
+					}
 				}
 			}
 
 			// draw more boxes with time
-			if(totalFallenBoxes > 10) { drawBox2 = true; }
-			if(totalFallenBoxes > 20) { drawBox3 = true; }
-			if(totalFallenBoxes > 40) { drawBox4 = true; }
-			if(totalFallenBoxes > 80) { drawBox5 = true; }
+			for(int i = 0; i < MAX_BOXES; i++) { if(totalFallenBoxes > 4 + ( 4 * i )) { falling[i].setInPlay(); } }
 			
 			if(health < 1) { isGameOver = true; }
 		}
@@ -213,29 +227,20 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 			bg.drawClouds(canvas);
 			drawCharacter(canvas);
 			if(!isGameOver) {
-				falling[0].drawBox(canvas, (int) characterX, (int) characterY);
-				
-				if(drawBox2) {
-					falling[1].drawBox(canvas, (int) characterX, (int) characterY);
+
+				for(int i = 0; i < MAX_BOXES; i++) {
+					if(falling[i].isInPlay()) { falling[i].drawBox(canvas, (int) characterX, (int) characterY); }
 				}
-				
-				if(drawBox3) {
-					falling[2].drawBox(canvas, (int) characterX, (int) characterY);
-				}
-				if(drawBox4) {
-					falling[3].drawBox(canvas, (int) characterX, (int) characterY);
-				}
-				if(drawBox5) {
-					falling[4].drawBox(canvas, (int) characterX, (int) characterY);
-				}
-				
 			}
-			osm.drawScore(canvas, score);
 			osm.drawHealth(canvas, health);
-			osm.showMessage(canvas, showBonus);
+			osm.drawScore(canvas, score, screenWidth - 80, 104); // top right
 
 			if(isGameOver) {
 				osm.drawGameOver(canvas);
+
+			} else {
+
+				if(fallingBonus.isInPlay()) { fallingBonus.drawBox(canvas, (int) characterX, (int) characterY); }
 			}
 		}
 
@@ -293,6 +298,34 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		}
 	}
 
+	private void restartGame() {
+
+		for(int i = 0; i < MAX_BOXES; i++) { falling[i].setNotInPlay(); }
+
+		falling[0].setInPlay(); // start with one falling object
+
+		isGameOver = false;
+
+		totalFallenBoxes = 0;
+		characterX = screenWidth / 2;
+		characterY = screenHeight - (screenHeight / 6);
+		characterPosition = 0;
+
+		xClickPosition = 0;
+		yClickPosition = 0;
+		catchStreak = 0;
+
+		scoreMultiplierBonus = 1;
+
+		isMoving = false;
+		caughtBox = false;
+		caughtGood = true;
+
+		score = 0;
+		health = 3;
+
+
+	}
 
 	@Override
 	public boolean onTouch(View v, MotionEvent me) {
@@ -301,7 +334,12 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		case MotionEvent.ACTION_DOWN:
 			isMoving = true;
 			xClickPosition = (int) me.getX();
-			yClickPosition = (int) me.getY();			
+			yClickPosition = (int) me.getY();
+
+			if(isGameOver && yClickPosition < 2*(screenHeight / 3) && yClickPosition > (screenHeight / 2) - 100) {
+				restartGame();
+			}
+
 			break;
 		case MotionEvent.ACTION_UP:
 			isMoving = false;

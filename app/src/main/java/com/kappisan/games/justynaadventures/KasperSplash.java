@@ -15,7 +15,7 @@ public class KasperSplash extends Activity {
 			public void run() {
 				try {
 					sleep(1000);
-					Intent menuIntent = new Intent("com.soidutsrepsak.games.justynaadventures.GAMESPLASH");
+					Intent menuIntent = new Intent("com.soidutsrepsak.games.justynaadventures.MAINMENU");
 					startActivity(menuIntent);
 				} catch(InterruptedException e) {
 					e.printStackTrace();

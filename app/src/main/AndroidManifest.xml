@@ -48,15 +48,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.kappisan.games.justynaadventures.ChooseLevelsScreen"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="com.soidutsrepsak.games.justynaadventures.CHOOSELEVELSCREEN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>        
-        <activity
             android:name="com.kappisan.games.justynaadventures.About"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >
@@ -74,16 +65,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
+
         <activity
-            android:name="com.kappisan.games.justynaadventures.BlackHoleGameScreen"
+            android:name="com.kappisan.games.justynaadventures.ChooseLevelsScreen"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.soidutsrepsak.games.justynaadventures.BLACKHOLEGAMESCREEN" />
+                <action android:name="com.soidutsrepsak.games.justynaadventures.CHOOSELEVELSCREEN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
+
     </application>
 
 

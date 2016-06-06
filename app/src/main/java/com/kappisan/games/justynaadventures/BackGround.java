@@ -38,7 +38,7 @@ public class BackGround extends Activity {
 		} else if(set == 2) {
 			backdrop = BitmapFactory.decodeResource(context.getResources(), R.drawable.gothic_background_03);
 		} else if(set == 3) {
-			backdrop = BitmapFactory.decodeResource(context.getResources(), R.drawable.gothic_background_01);
+			backdrop = BitmapFactory.decodeResource(context.getResources(), R.drawable.library_background );
 		} else if(set == 4) {
 			backdrop = BitmapFactory.decodeResource(context.getResources(), R.drawable.wonder_land_03);
 		} else {

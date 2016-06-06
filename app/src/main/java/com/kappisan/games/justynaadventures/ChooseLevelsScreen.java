@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class ChooseLevelsScreen extends Activity {
 
@@ -20,13 +21,15 @@ public class ChooseLevelsScreen extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.choose_levels_screen);
 		context = getApplicationContext();
-		
-		Button buttonChristmas = (Button) findViewById(R.id.levelChristmas01Button);
-		Button buttonShinigami = (Button) findViewById(R.id.levelShinigami01Button);
-		Button buttonWonderland = (Button) findViewById(R.id.levelWonderland01Button);
-		Button buttonGeek = (Button) findViewById(R.id.levelGeek01Button);
-		
-		buttonChristmas.setOnClickListener(new View.OnClickListener() {
+
+		Button backButton = (Button) findViewById(R.id.backButtonLevels);
+
+		ImageButton imageWatchButton = (ImageButton) findViewById(R.id.imageWatchButton);
+		ImageButton appleButton = (ImageButton) findViewById(R.id.appleButton);
+		ImageButton bookButton = (ImageButton) findViewById(R.id.imageBookButton);
+		ImageButton presentButton = (ImageButton) findViewById(R.id.presentButton);
+
+		presentButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -39,8 +42,8 @@ public class ChooseLevelsScreen extends Activity {
 				startActivity(i);
 			}
 		});
-		
-		buttonShinigami.setOnClickListener(new View.OnClickListener() {
+
+		appleButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -53,8 +56,8 @@ public class ChooseLevelsScreen extends Activity {
 				startActivity(i);
 			}
 		});
-		
-		buttonWonderland.setOnClickListener(new View.OnClickListener() {
+
+		imageWatchButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -67,8 +70,8 @@ public class ChooseLevelsScreen extends Activity {
 				startActivity(i);
 			}
 		});
-		
-		buttonGeek.setOnClickListener(new View.OnClickListener() {
+
+		bookButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -76,11 +79,17 @@ public class ChooseLevelsScreen extends Activity {
 				Intent i = new Intent("com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN");
 				i.putExtra("justyna",3);
 				i.putExtra("falling_set",3);
-				i.putExtra("background_set",2);
+				i.putExtra("background_set",3);
 				
 				startActivity(i);
 			}
 		});
+
+		backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) { finish();	}
+		});
+
 	}
 
 
