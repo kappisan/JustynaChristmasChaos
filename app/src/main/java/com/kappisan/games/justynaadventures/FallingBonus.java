@@ -18,9 +18,9 @@ public class FallingBonus extends Activity {
 	int screenWidth;
 	int screenHeight;
 	int scaleBy;
-	Bitmap box1, box2, box3, box4, badBox1, badBox2, badBox3;
-	Bitmap box1_big, box2_big, box3_big, box4_big, badBox1_big, badBox2_big, badBox3_big;
-	Bitmap box1_small, box2_small, box3_small, box4_small, badBox1_small, badBox2_small, badBox3_small;
+	Bitmap box1, box2, box3;
+	Bitmap box1_big, box2_big, box3_big;
+	Bitmap box1_small, box2_small, box3_small;
 
 	int boxX, boxY;
 	float caughtBoxY;
@@ -38,12 +38,8 @@ public class FallingBonus extends Activity {
 
 	public int getMultiplier() {
 		if(this.drawPresent == 0 && this.caughtBox) { return 2; }
-		else if(this.drawPresent == 1 && this.caughtBox) { return 2; }
-		else if(this.drawPresent == 2 && this.caughtBox) { return 3; }
-		else if(this.drawPresent == 3 && this.caughtBox) { return 3; }
-		else if(this.drawPresent == 4 && this.caughtBox) { return 5; }
-		else if(this.drawPresent == 5 && this.caughtBox) { return 5; }
-		else if(this.drawPresent == 6 && this.caughtBox) { return 5; }
+		else if(this.drawPresent == 1 && this.caughtBox) { return 3; }
+		else if(this.drawPresent == 2 && this.caughtBox) { return 5; }
 
 		return 1;
 	}
@@ -66,34 +62,18 @@ public class FallingBonus extends Activity {
 
 	public void resizeBig() {
 
-		box1 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_2_bonus);
-		box2 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_2_bonus);
-		box3 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_3_bonus);
-		box4 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_3_bonus);
-		badBox1 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_5_bonus);
-		badBox2 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_5_bonus);
-		badBox3 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_5_bonus);
-
-		box1 = getResizedBitmap(box1,300,300);
-		box2 = getResizedBitmap(box2,300,300);
-		box3 = getResizedBitmap(box3,300,300);
-		box4 = getResizedBitmap(box4,300,300);
-		badBox1 = getResizedBitmap(badBox1,300,300);
-		badBox2 = getResizedBitmap(badBox2,300,300);
-		badBox3 = getResizedBitmap(badBox3,300,300);
+		box1 = box1_big;
+		box2 = box2_big;
+		box3 = box3_big;
 
 		this.size = 1;
 	}
 
 
 	public void resizeSmall() {
-		box1 = getResizedBitmap(box1,box1.getHeight() / 2,box1.getWidth() / 2);
-		box2 = getResizedBitmap(box2,box2.getHeight() / 2,box2.getWidth() / 2);
-		box3 = getResizedBitmap(box3,box3.getHeight() / 2,box3.getWidth() / 2);
-		box4 = getResizedBitmap(box4,box4.getHeight() / 2,box4.getWidth() / 2);
-		badBox1 = getResizedBitmap(badBox1,badBox1.getHeight() / 3,badBox1.getWidth() / 3);
-		badBox2 = getResizedBitmap(badBox2,badBox2.getHeight() / 3,badBox2.getWidth() / 3);
-		badBox3 = getResizedBitmap(badBox3,badBox3.getHeight() / 3,badBox3.getWidth() / 3);
+		box1 = box1_small;
+		box2 = box2_small;
+		box3 = box3_small;
 
 		this.size = 0;
 	}
@@ -107,14 +87,13 @@ public class FallingBonus extends Activity {
 		multiplier = 1;
 		this.context = context;
 
-		box1 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_2_bonus);
-		box2 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_2_bonus);
-		box3 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_3_bonus);
-		box4 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_3_bonus);
-		badBox1 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_5_bonus);
-		badBox2 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_5_bonus);
-		badBox3 = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_5_bonus);
+		box1_big = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_2_bonus);
+		box2_big = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_3_bonus);
+		box3_big = BitmapFactory.decodeResource(context.getResources(), R.drawable.times_5_bonus);
 
+		box1_small = getResizedBitmap(box1_big, 150, 150);
+		box2_small = getResizedBitmap(box2_big, 150, 150);
+		box3_small = getResizedBitmap(box3_big, 150, 150);
 
 		resizeSmall();
 		
@@ -122,11 +101,9 @@ public class FallingBonus extends Activity {
 		
 		fallSpeed = speed;
 		
-		if(boxSet == 0) {
-			drawPresent = r.nextInt(7);	
-		} else if(boxSet == 1) {
-			drawPresent = r.nextInt(4) + 4;			
-		}
+
+		drawPresent = r.nextInt(3);
+
 
 		boxX = r.nextInt(screenWidth - 50) + 25;
 		boxY = -300;
@@ -179,14 +156,6 @@ public class FallingBonus extends Activity {
 			canvas.drawBitmap(box2, drawX, drawY, null);
 		} else if(drawPresent == 2) {
 			canvas.drawBitmap(box3, drawX, drawY, null);
-		} else if(drawPresent == 3) {
-			canvas.drawBitmap(box4, drawX, drawY, null);
-		} else if(drawPresent == 4) {
-			canvas.drawBitmap(badBox1, drawX, drawY, null);
-		} else if(drawPresent == 5) {
-			canvas.drawBitmap(badBox2, drawX, drawY, null);
-		} else if(drawPresent == 6) {
-			canvas.drawBitmap(badBox3, drawX, drawY, null);
 		}
 	}
 	
@@ -196,12 +165,8 @@ public class FallingBonus extends Activity {
 		
 		boxX = r.nextInt(screenWidth - 50) + 25;
 		boxY = -30;
-		if(boxSet == 0) {
-			drawPresent = r.nextInt(7);	
-		} else if(boxSet == 1) {
-			drawPresent = r.nextInt(4) + 4;			
-		}
 
+		drawPresent = r.nextInt(3);
 	}
 	
 	public boolean getCaughtBox() {	return this.caughtBox;	}
