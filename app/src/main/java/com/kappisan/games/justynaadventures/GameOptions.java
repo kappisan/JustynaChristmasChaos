@@ -3,6 +3,7 @@ package com.kappisan.games.justynaadventures;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,6 +22,9 @@ public class GameOptions extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.game_options);
 		context = getApplicationContext();
+
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT); // set to portrait
+
 		backButton = (Button) findViewById(R.id.optionsBackButton);
 
 		backButton.setOnClickListener(new View.OnClickListener() {

@@ -2,6 +2,7 @@ package com.kappisan.games.justynaadventures;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,6 +20,8 @@ public class MainMenu extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_menu);
+
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT); // set to portrait
 
 		bgMusic = MediaPlayer.create(MainMenu.this, R.raw.justyna_christmas_chaos_main);
 		bgMusic.setLooping(true);

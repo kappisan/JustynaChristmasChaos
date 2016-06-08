@@ -1,5 +1,6 @@
 package com.kappisan.games.justynaadventures;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +11,9 @@ public class KasperSplash extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.kasper_splash);
+
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT); // set to portrait
+
 		Thread logoTimer = new Thread() {
 			@Override
 			public void run() {
