@@ -3,24 +3,16 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/game_splash_screen_3"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:gravity="bottom">
 
 
     <CheckBox
-        android:id="@+id/checkBackgroundMusic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/red"
-        android:text="Background Music"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="20dp" />
-    
-    <CheckBox
-        android:id="@+id/ckeckSounds"
-        android:layout_width="261dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/red"
         android:text="Game Sounds"
+        android:id="@+id/checkBox"
+        android:checked="false"
         android:layout_marginLeft="20dp" />
 
     <Button
@@ -47,6 +39,7 @@
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp" />
 
 </LinearLayout>

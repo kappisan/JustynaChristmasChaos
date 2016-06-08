@@ -3,6 +3,7 @@ package com.kappisan.games.justynaadventures;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,21 +12,32 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class GameOptions extends Activity {
 
 	private Context context;
 
 	Button backButton;
-	
+	Button saveButton;
+
+	public static String filename = "MyShared";
+	//SharedPreferences someData;
+
+	//Random r;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.game_options);
 		context = getApplicationContext();
 
+		//final SharedPreferences someData = getSharedPreferences(filename, 0);
+
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT); // set to portrait
 
 		backButton = (Button) findViewById(R.id.optionsBackButton);
+		saveButton = (Button) findViewById(R.id.optionsSavebutton);
 
 		backButton.setOnClickListener(new View.OnClickListener() {
 
@@ -34,6 +46,21 @@ public class GameOptions extends Activity {
 				finish();
 			}
 		});
+
+		saveButton.setOnClickListener(new View.OnClickListener() {
+
+			//String stringData = "variable " + r.nextInt(10);
+			//SharedPreferences.Editor editor = someData.edit();
+			//editor.putString("sharedString", stringData);
+
+
+
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
+
 	}
 	
 

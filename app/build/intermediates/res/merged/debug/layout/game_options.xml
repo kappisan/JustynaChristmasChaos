@@ -3,25 +3,24 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/game_splash_screen_3"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:gravity="bottom">
 
 
-    <CheckBox
-        android:id="@+id/checkBackgroundMusic"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/red"
-        android:text="Background Music"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="20dp" />
-    
-    <CheckBox
-        android:id="@+id/ckeckSounds"
-        android:layout_width="261dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/red"
-        android:text="Game Sounds"
-        android:layout_marginLeft="20dp" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Coming Soon"
+        android:id="@+id/textView6"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
 
     <Button
         android:layout_width="fill_parent"
@@ -47,6 +46,7 @@
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp" />
 
 </LinearLayout>
