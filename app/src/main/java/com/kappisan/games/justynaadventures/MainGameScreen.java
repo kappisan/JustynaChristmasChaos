@@ -96,13 +96,11 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		bg = new BackGround(screenWidth, screenHeight, context, backgroundSet);
 		
 		falling = new FallingObject[MAX_BOXES]; // allocate array of falling objects
-		fallingBonus = new FallingBonus(screenWidth, screenHeight, context, 14, 0, fallingSet);
+		fallingBonus = new FallingBonus(screenWidth, screenHeight, context, 14);
 
 		for(int i = 0; i < MAX_BOXES; i++) { falling[i] = new FallingObject(screenWidth, screenHeight, context, 14 + i, 0, fallingSet); }
 
 		falling[0].setInPlay(); // start with one falling object
-
-
 
 		isGameOver = false;
 

@@ -33,7 +33,6 @@ public class FallingBonus extends Activity {
 	boolean caughtBox;
 	private boolean inPlay;
 	private int multiplier;
-	int boxSet;
 	private int size; // 0 = small, 1 = big
 
 	public int getMultiplier() {
@@ -78,11 +77,11 @@ public class FallingBonus extends Activity {
 		this.size = 0;
 	}
 
-	public FallingBonus(int x, int y, Context context, int speed, int boxClass, int set) {
+	public FallingBonus(int x, int y, Context context, int speed) {
 		screenWidth = x;
 		screenHeight = y;
 		scaleBy = screenHeight/1280;
-		boxSet = boxClass;
+
 		inPlay = false;
 		multiplier = 1;
 		this.context = context;
