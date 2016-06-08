@@ -11,18 +11,18 @@ public class JustynaObject extends Activity {
 
 	Bitmap character, characterLeft, characterRight, characterCaught, characterCaughtBad;
 	int drawJustyna; // used to determine which character to draw
-	
-	public JustynaObject(Context context, int justynaSet) {
-		
+
+	public JustynaObject(Context context, int justynaSet, int scaleBy) {
+
 		drawJustyna = justynaSet;
-			
+
 		// gothic
 		if(drawJustyna == 1) {
 			// get bitmaps
 			//**************************************************************************
-			character = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_san);
-			characterLeft = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_san_left);
-			characterRight = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_san_right);
+			character = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_san_edit);
+			characterLeft = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_san_left_edit);
+			characterRight = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_san_right_edit);
 			characterCaught = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_san_catch_good);
 
 
@@ -33,13 +33,13 @@ public class JustynaObject extends Activity {
 			characterRight = getResizedBitmap(characterRight,500,432);
 			characterCaught = getResizedBitmap(characterCaught,500,432);
 			characterCaughtBad = getResizedBitmap(character,500,432);
-			
-		// wonderland
+
+			// wonderland
 		} else if(drawJustyna == 2) {
 			// get bitmaps
 			//**************************************************************************
 			character = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_in_wonderland);
-			
+
 			// resize bitmaps
 			//**************************************************************************
 			character = getResizedBitmap(character,500,350);
@@ -47,13 +47,13 @@ public class JustynaObject extends Activity {
 			characterRight = getResizedBitmap(character,500,350);
 			characterCaught = getResizedBitmap(character,500,350);
 			characterCaughtBad = getResizedBitmap(character,500,350);
-			
-		// geek
+
+			// geek
 		} else if(drawJustyna == 3) {
 			// get bitmaps
 			//**************************************************************************
 			character = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_geek);
-			
+
 			// resize bitmaps
 			//**************************************************************************
 			character = getResizedBitmap(character,500,350);
@@ -61,8 +61,8 @@ public class JustynaObject extends Activity {
 			characterRight = getResizedBitmap(character,500,350);
 			characterCaught = getResizedBitmap(character,500,350);
 			characterCaughtBad = getResizedBitmap(character,500,350);
-			
-		// christmas
+
+			// christmas
 		} else {
 			// get bitmaps
 			//**************************************************************************
@@ -71,7 +71,7 @@ public class JustynaObject extends Activity {
 			characterRight = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_blue_jumper_christmas_right);
 			characterCaught = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_blue_jumper_christmas_catch_good);
 			characterCaughtBad = BitmapFactory.decodeResource(context.getResources(), R.drawable.justyna_blue_jumper_christmas_catch_bad);
-			
+
 			// resize bitmaps
 			//**************************************************************************
 			character = getResizedBitmap(character,500,350);

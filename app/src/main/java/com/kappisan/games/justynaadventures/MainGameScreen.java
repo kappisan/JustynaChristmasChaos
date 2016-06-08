@@ -71,7 +71,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		super.onCreate(savedInstanceState);
 		v = new OurView(this);
 		v.setOnTouchListener(this);
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR); // prevent rotation
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT); // set to portrait
 		
 		Display display = getWindowManager().getDefaultDisplay();
 		Point size = new Point();
@@ -92,7 +92,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 			fallingSet = extras.getInt("falling_set");
 		}
 		
-		tina = new JustynaObject(context, justynaSet);
+		tina = new JustynaObject(context, justynaSet, scaleBy);
 		bg = new BackGround(screenWidth, screenHeight, context, backgroundSet);
 		
 		falling = new FallingObject[MAX_BOXES]; // allocate array of falling objects

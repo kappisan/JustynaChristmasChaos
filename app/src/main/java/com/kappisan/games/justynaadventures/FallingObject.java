@@ -18,7 +18,7 @@ public class FallingObject extends Activity {
 	
 	int screenWidth;
 	int screenHeight;
-	int scaleBy;
+	float scaleBy;
 	Bitmap box1, box2, box3, box4, badBox1, badBox2, badBox3;
 	
 	int boxX, boxY;
@@ -81,13 +81,13 @@ public class FallingObject extends Activity {
 		
 		// resize bitmaps
 		//**************************************************************************
-		box1 = getResizedBitmap(box1,box1.getHeight() / 2,box1.getWidth() / 2);
-		box2 = getResizedBitmap(box2,box2.getHeight() / 2,box2.getWidth() / 2);
-		box3 = getResizedBitmap(box3,box3.getHeight() / 2,box3.getWidth() / 2);	
-		box4 = getResizedBitmap(box4,box4.getHeight() / 2,box4.getWidth() / 2);	
-		badBox1 = getResizedBitmap(badBox1,badBox1.getHeight() / 3,badBox1.getWidth() / 3);
-		badBox2 = getResizedBitmap(badBox2,badBox2.getHeight() / 3,badBox2.getWidth() / 3);
-		badBox3 = getResizedBitmap(badBox3,badBox3.getHeight() / 3,badBox3.getWidth() / 3);
+		box1 = getResizedBitmap(box1,200,200);
+		box2 = getResizedBitmap(box2,200,200);
+		box3 = getResizedBitmap(box3,200,200);
+		box4 = getResizedBitmap(box4,200,200);
+		badBox1 = getResizedBitmap(badBox1,200,200);
+		badBox2 = getResizedBitmap(badBox2,200,200);
+		badBox3 = getResizedBitmap(badBox3,200,200);
 		
 		r = new Random();
 		

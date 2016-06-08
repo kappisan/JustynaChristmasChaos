@@ -23,6 +23,8 @@ public class BackGround extends Activity {
 	int cloud3X, cloud3Y;
 	
 	int showBackground;
+
+	int set;
 	
 
 	
@@ -32,6 +34,7 @@ public class BackGround extends Activity {
 		scaleBy = screenHeight/1280;
 		Random r = new Random();
 		showBackground = set;
+		this.set = set;
 		
 		if(set == 1) {
 			backdrop = BitmapFactory.decodeResource(context.getResources(), R.drawable.christmas_background_06);
@@ -53,8 +56,10 @@ public class BackGround extends Activity {
 		
 		// resize bitmaps
 		//**************************************************************************
-		cloud2 = getResizedBitmap(cloud1,cloud1.getHeight() / 2 ,cloud1.getWidth() / 2);
-		cloud3 = getResizedBitmap(cloud1,cloud1.getHeight() / 3 ,cloud1.getWidth() / 3);
+		cloud1 = getResizedBitmap(cloud1,252,479);
+		cloud2 = getResizedBitmap(cloud1,126,240);
+		cloud3 = getResizedBitmap(cloud1,84,160
+		);
 
 		cloud1X = -100;
 		cloud2X = screenWidth + 100;
@@ -81,6 +86,9 @@ public class BackGround extends Activity {
 	}
 
 	public void drawClouds(Canvas canvas) {
+
+		if(set == 3) return; // dont draw clouds if library
+
 		cloud1X += 3;
 		cloud2X -= 2;
 		cloud3X++;
@@ -100,9 +108,5 @@ public class BackGround extends Activity {
 		canvas.drawBitmap(cloud3, cloud3X, 30, null);
 		canvas.drawBitmap(cloud2, cloud2X, 20, null);
 		canvas.drawBitmap(cloud1, cloud1X, 30, null);
-	}
-	
-	public void drawBlackHole(Canvas canvas, int x, int y) {
-		canvas.drawBitmap(cloud3, x - cloud3.getWidth(), y - cloud3.getHeight(), null);
 	}
 }
