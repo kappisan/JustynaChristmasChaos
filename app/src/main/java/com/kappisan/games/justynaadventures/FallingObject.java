@@ -10,7 +10,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
-import android.media.MediaPlayer;
 
 public class FallingObject extends Activity {
 
@@ -185,7 +184,7 @@ public class FallingObject extends Activity {
 		this.caughtBox = false;
 		
 		boxX = r.nextInt(screenWidth - 50) + 25;
-		boxY = -30;
+		boxY = -30 - r.nextInt(100);
 		if(boxSet == 0) {
 			drawPresent = r.nextInt(7);	
 		} else if(boxSet == 1) {
