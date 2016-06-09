@@ -59,7 +59,7 @@ public class GameOptions extends Activity {
 				savePreferences("Sound_CheckBox_Value", gameSoundsCheckBox.isChecked());
 				savePreferences("Music_CheckBox_Value", gameMusicCheckBox.isChecked());
 
-				if(musicPlaying && !gameMusicCheckBox.isChecked()) { /* stop music */ MainMenu.stopMusic(); }
+				if(!gameMusicCheckBox.isChecked()) { /* stop music */ MainMenu.stopMusic(); }
 				if(gameMusicCheckBox.isChecked()) { /* start music */ MainMenu.startMusic(); }
 
 				Toast.makeText(getApplicationContext(),"Preferences Saved", Toast.LENGTH_SHORT).show();
@@ -89,7 +89,7 @@ public class GameOptions extends Activity {
 		switch(item.getItemId()) {
 		
 		case R.id.menuShowAbout:
-			startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.ABOUT"));
+			startActivity(new Intent("com.kappisan.games.justynaadventures.ABOUT"));
 			return true;
 		}
 		

@@ -19,7 +19,7 @@ public class GameSplash extends Activity {
 			public void run() {
 				try {
 					sleep(500);
-					Intent menuIntent = new Intent("com.soidutsrepsak.games.justynaadventures.MAINMENU");
+					Intent menuIntent = new Intent("com.kappisan.games.justynaadventures.MAINMENU");
 					startActivity(menuIntent);
 				} catch(InterruptedException e) {
 					e.printStackTrace();

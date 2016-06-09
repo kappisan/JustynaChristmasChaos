@@ -37,7 +37,7 @@ public class ChooseLevelsScreen extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				Intent i = new Intent("com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN");
+				Intent i = new Intent("com.kappisan.games.justynaadventures.MAINGAMESCREEN");
 				i.putExtra("justyna",0);
 				i.putExtra("falling_set",0);
 				i.putExtra("background_set",1);
@@ -51,7 +51,7 @@ public class ChooseLevelsScreen extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				Intent i = new Intent("com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN");
+				Intent i = new Intent("com.kappisan.games.justynaadventures.MAINGAMESCREEN");
 				i.putExtra("justyna",1);
 				i.putExtra("falling_set",1);
 				i.putExtra("background_set",2);
@@ -65,7 +65,7 @@ public class ChooseLevelsScreen extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				Intent i = new Intent("com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN");
+				Intent i = new Intent("com.kappisan.games.justynaadventures.MAINGAMESCREEN");
 				i.putExtra("justyna",2);
 				i.putExtra("falling_set",2);
 				i.putExtra("background_set",4);
@@ -79,7 +79,7 @@ public class ChooseLevelsScreen extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				Intent i = new Intent("com.soidutsrepsak.games.justynaadventures.MAINGAMESCREEN");
+				Intent i = new Intent("com.kappisan.games.justynaadventures.MAINGAMESCREEN");
 				i.putExtra("justyna",3);
 				i.putExtra("falling_set",3);
 				i.putExtra("background_set",3);
@@ -111,7 +111,7 @@ public class ChooseLevelsScreen extends Activity {
 		switch(item.getItemId()) {
 		
 		case R.id.menuShowAbout:
-			startActivity(new Intent("com.soidutsrepsak.games.justynaadventures.ABOUT"));
+			startActivity(new Intent("com.kappisan.games.justynaadventures.ABOUT"));
 			return true;
 		}
 		

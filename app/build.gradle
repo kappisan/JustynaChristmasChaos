@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.soidutsrepsak.games.justynaadventures"
+        applicationId "com.kappisan.games.justynaadventures"
         minSdkVersion 8
         targetSdkVersion 18
     }
