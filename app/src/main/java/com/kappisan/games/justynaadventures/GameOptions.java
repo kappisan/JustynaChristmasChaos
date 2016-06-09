@@ -11,8 +11,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.content.SharedPreferences.Editor;
+import android.preference.PreferenceManager;
 
-import java.util.Random;
 
 public class GameOptions extends Activity {
 
@@ -20,11 +22,10 @@ public class GameOptions extends Activity {
 
 	Button backButton;
 	Button saveButton;
+	CheckBox gameSoundsCheckBox;
+	CheckBox gameMusicCheckBox;
 
-	public static String filename = "MyShared";
-	//SharedPreferences someData;
 
-	//Random r;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,9 @@ public class GameOptions extends Activity {
 		setContentView(R.layout.game_options);
 		context = getApplicationContext();
 
-		//final SharedPreferences someData = getSharedPreferences(filename, 0);
+		gameSoundsCheckBox = (CheckBox) findViewById(R.id.gameSoundsCheckBox);
+		gameMusicCheckBox = (CheckBox) findViewById(R.id.gameMusicCheckBox);
+
 
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT); // set to portrait
 
@@ -54,15 +57,21 @@ public class GameOptions extends Activity {
 			//editor.putString("sharedString", stringData);
 
 
-
 			@Override
 			public void onClick(View v) {
+				savePreferences("Sound_CheckBox_Value", gameSoundsCheckBox.isChecked());
+				savePreferences("Music_CheckBox_Value", gameMusicCheckBox.isChecked());
+
 				finish();
 			}
 		});
 
+		loadSavedPreferences();
+
 	}
-	
+
+
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,5 +93,31 @@ public class GameOptions extends Activity {
 		
 		return false;
 	}
-	
+
+
+
+
+	private void loadSavedPreferences() {
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+		boolean soundCheckBoxValue = sharedPreferences.getBoolean("Sound_CheckBox_Value", false);
+		boolean musicCheckBoxValue = sharedPreferences.getBoolean("Music_CheckBox_Value", false);
+
+		if (soundCheckBoxValue) { gameSoundsCheckBox.setChecked(true); }
+		else { gameSoundsCheckBox.setChecked(false); }
+
+		if (musicCheckBoxValue) { gameMusicCheckBox.setChecked(true); }
+		else { gameMusicCheckBox.setChecked(false); }
+
+	}
+
+	// save checkbox boolean value
+	private void savePreferences(String key, boolean value) {
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(this);
+		Editor editor = sharedPreferences.edit();
+		editor.putBoolean(key, value);
+		editor.commit();
+	}
+
 }

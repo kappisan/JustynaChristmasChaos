@@ -7,20 +7,21 @@
     android:gravity="bottom">
 
 
-    <TextView
-        android:layout_width="fill_parent"
+    <CheckBox
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Coming Soon"
-        android:id="@+id/textView6"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="100dp"
+        android:text="Game Music"
+        android:id="@+id/gameMusicCheckBox"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textStyle="bold"
-        android:textSize="40dp"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Sounds"
+        android:id="@+id/gameSoundsCheckBox"
+        android:checked="false"
+        android:layout_marginLeft="20dp" />
 
     <Button
         android:layout_width="fill_parent"

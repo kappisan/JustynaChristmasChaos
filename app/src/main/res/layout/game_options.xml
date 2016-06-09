@@ -10,8 +10,16 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Game Music"
+        android:id="@+id/gameMusicCheckBox"
+        android:layout_marginLeft="20dp"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Game Sounds"
-        android:id="@+id/checkBox"
+        android:id="@+id/gameSoundsCheckBox"
         android:checked="false"
         android:layout_marginLeft="20dp" />
 
