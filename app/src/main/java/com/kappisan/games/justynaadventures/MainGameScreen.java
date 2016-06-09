@@ -5,11 +5,13 @@ import java.util.Random;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -31,7 +33,10 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 	int screenWidth;
 	int screenHeight;
 	int scaleBy;
-	
+
+	private boolean soundCheckBoxValue;
+	private boolean musicCheckBoxValue;
+
 	OurView v;
 	BackGround bg;
 	OnScreenMessages osm;
@@ -126,7 +131,9 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		badCatch = MediaPlayer.create(MainGameScreen.this, R.raw.catch_bad);
 		scoreMultiplier = MediaPlayer.create(MainGameScreen.this, R.raw.score_multiplier);
 		presentFall = MediaPlayer.create(MainGameScreen.this, R.raw.present_fall);
-		
+
+		loadSavedPreferences();
+
 		setContentView(v);
 	}
 	
@@ -200,10 +207,10 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 						if (falling[i].getCaughtBox()) {
 							if (falling[i].checkIfGoodBox()) {
 								score = score + fallingBonus.getMultiplier();
-								goodCatch.start();
+								if(soundCheckBoxValue) { goodCatch.start(); }
 							} else {
 								health--;
-								badCatch.start();
+								if(soundCheckBoxValue) { badCatch.start(); }
 							}
 						}
 						falling[i].resetBox();
@@ -352,5 +359,16 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		
 		return true;
 	}
+
+
+	private void loadSavedPreferences() {
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+		soundCheckBoxValue = sharedPreferences.getBoolean("Sound_CheckBox_Value", false);
+		musicCheckBoxValue = sharedPreferences.getBoolean("Music_CheckBox_Value", false);
+
+	}
+
+
 
 }

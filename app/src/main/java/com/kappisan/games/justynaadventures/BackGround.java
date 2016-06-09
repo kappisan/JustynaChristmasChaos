@@ -18,9 +18,9 @@ public class BackGround extends Activity {
 	int screenHeight;
 	int scaleBy;
 	
-	int cloud1X, cloud1Y;
-	int cloud2X, cloud2Y;
-	int cloud3X, cloud3Y;
+	int cloud1X;
+	int cloud2X;
+	int cloud3X;
 	
 	int showBackground;
 

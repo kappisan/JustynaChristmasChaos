@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 
 
 public class GameOptions extends Activity {
@@ -24,6 +25,7 @@ public class GameOptions extends Activity {
 	Button saveButton;
 	CheckBox gameSoundsCheckBox;
 	CheckBox gameMusicCheckBox;
+	boolean musicPlaying;
 
 
 
@@ -52,15 +54,15 @@ public class GameOptions extends Activity {
 
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
-			//String stringData = "variable " + r.nextInt(10);
-			//SharedPreferences.Editor editor = someData.edit();
-			//editor.putString("sharedString", stringData);
-
-
 			@Override
 			public void onClick(View v) {
 				savePreferences("Sound_CheckBox_Value", gameSoundsCheckBox.isChecked());
 				savePreferences("Music_CheckBox_Value", gameMusicCheckBox.isChecked());
+
+				if(musicPlaying && !gameMusicCheckBox.isChecked()) { /* stop music */ MainMenu.stopMusic(); }
+				if(gameMusicCheckBox.isChecked()) { /* start music */ MainMenu.startMusic(); }
+
+				Toast.makeText(getApplicationContext(),"Preferences Saved", Toast.LENGTH_SHORT).show();
 
 				finish();
 			}
@@ -102,6 +104,8 @@ public class GameOptions extends Activity {
 
 		boolean soundCheckBoxValue = sharedPreferences.getBoolean("Sound_CheckBox_Value", false);
 		boolean musicCheckBoxValue = sharedPreferences.getBoolean("Music_CheckBox_Value", false);
+
+		musicPlaying = soundCheckBoxValue;
 
 		if (soundCheckBoxValue) { gameSoundsCheckBox.setChecked(true); }
 		else { gameSoundsCheckBox.setChecked(false); }
