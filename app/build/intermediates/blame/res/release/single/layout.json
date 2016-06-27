@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\layout\\choose_levels_screen.xml",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\layout\\choose_levels_screen.xml"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\layout\\kasper_splash.xml",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\layout\\kasper_splash.xml"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\layout\\main_menu.xml",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\layout\\main_menu.xml"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\layout\\game_options.xml",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\layout\\game_options.xml"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\layout\\about.xml",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\layout\\about.xml"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\layout\\game_splash.xml",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\layout\\game_splash.xml"
+    }
+]

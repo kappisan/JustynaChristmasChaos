@@ -44,16 +44,16 @@
         "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\kasper_splash.xml"
     },
     {
-        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\choose_levels_screen.xml",
-        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\choose_levels_screen.xml"
-    },
-    {
         "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\about.xml",
         "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\about.xml"
     },
     {
         "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_splash.xml",
         "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\layout\\game_splash.xml"
+    },
+    {
+        "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\choose_levels_screen.xml",
+        "source": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\src\\main\\res\\layout\\choose_levels_screen.xml"
     },
     {
         "merged": "E:\\kappisan\\JustynaAdventuresV1.522\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_options.xml",

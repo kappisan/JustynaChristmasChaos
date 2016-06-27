@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\raw\\present_fall.mp3",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\raw\\present_fall.mp3"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\raw\\score_multiplier.mp3",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\raw\\score_multiplier.mp3"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\raw\\justyna_christmas_chaos_main.mp3",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\raw\\justyna_christmas_chaos_main.mp3"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\raw\\game_data.txt",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\raw\\game_data.txt"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\raw\\catch_good.mp3",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\raw\\catch_good.mp3"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\raw\\catch_bad.mp3",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\raw\\catch_bad.mp3"
+    }
+]

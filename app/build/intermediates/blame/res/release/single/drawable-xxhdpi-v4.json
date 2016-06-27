@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ic_launcher512x512.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher512x512.png"
+    },
+    {
+        "merged": "E:\\JustynaChristmasChaos\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "E:\\JustynaChristmasChaos\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    }
+]

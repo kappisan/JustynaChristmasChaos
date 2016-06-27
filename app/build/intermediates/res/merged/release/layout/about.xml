@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/game_splash_screen_3"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:textColor="@color/red"
+        android:gravity="center_horizontal"
+        android:text="kappisan 2016"
+        android:layout_marginTop="200dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="for Justyna...                   "
+        />
+    
+    
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:textColor="@color/green"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="             ...I love you"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="33dp"
+        android:textColor="@color/red"
+        android:text="CREDITS"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:text="Programming: kappisan"
+        android:layout_marginLeft="20dp" />
+  	
+  	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:text="Art: kappisan"
+        android:layout_marginLeft="20dp" />
+  	
+  	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:text="Soundtrack: kappisan"
+        android:layout_marginLeft="20dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:text="Back"
+        android:id="@+id/backButtonAbout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#a10023"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="copyright kappisan 2013 - 2016"
+        android:id="@+id/textView"
+        android:gravity="bottom"
+        android:textColor="#191919"
+        android:layout_marginLeft="20dp" />
+
+</LinearLayout>

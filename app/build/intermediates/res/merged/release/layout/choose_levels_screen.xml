@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/game_splash_screen_3"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.88"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="93dp"
+                android:layout_height="106dp"
+                android:background="@drawable/apple"
+                android:id="@+id/appleButton"
+                android:layout_column="3" />
+
+            <ImageButton
+                android:layout_width="104dp"
+                android:layout_height="103dp"
+                android:background="@drawable/present_blue_yellow"
+                android:id="@+id/presentButton"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_column="5" />
+
+            <ImageButton
+                android:layout_width="104dp"
+                android:layout_height="103dp"
+                android:background="@drawable/book_red"
+                android:id="@+id/imageBookButton"
+                android:clickable="true"
+                android:layout_column="6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Shinigami"
+                android:id="@+id/textView2"
+                android:layout_column="3"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:textAlignment="center"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Christmas"
+                android:id="@+id/textView3"
+                android:layout_column="5"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:textAlignment="center"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   Library"
+                android:id="@+id/textView4"
+                android:layout_column="6"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:textAlignment="center"
+                android:textSize="17dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="104dp"
+                android:layout_height="103dp"
+                android:background="@drawable/wrist_watch"
+                android:id="@+id/imageWatchButton"
+                android:clickable="true"
+                android:layout_gravity="right"
+                android:layout_column="3" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Wonderland"
+                android:id="@+id/textView5"
+                android:layout_column="3"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:textAlignment="center"
+                android:textSize="17dp" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:text="Back"
+        android:id="@+id/backButtonLevels"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:background="#a10023"
+        android:layout_marginRight="20dp"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

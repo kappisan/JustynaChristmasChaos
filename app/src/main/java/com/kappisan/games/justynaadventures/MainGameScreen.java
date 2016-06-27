@@ -68,8 +68,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 	int justynaSet = 0;
 	int backgroundSet = 0;
 	int fallingSet = 0;
-
-
+	int currentHighScore = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +83,7 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 		screenWidth = size.x;
 		screenHeight = size.y;
 		scaleBy = screenHeight/1280;
+
 		Context context = this;
 
 		osm = new OnScreenMessages(screenWidth, screenHeight, context);
@@ -222,7 +222,10 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 			// draw more boxes with time
 			for(int i = 0; i < MAX_BOXES; i++) { if(totalFallenBoxes > 4 + ( 4 * i )) { falling[i].setInPlay(); } }
 			
-			if(health < 1) { isGameOver = true; }
+			if(!isGameOver && health < 1) {
+				isGameOver = true;
+				if(currentHighScore < score) { savePreferences("High_Score_Value", score); }
+			}
 		}
 		
 		@Override
@@ -364,11 +367,18 @@ public class MainGameScreen extends Activity implements OnTouchListener {
 	private void loadSavedPreferences() {
 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
+		currentHighScore = sharedPreferences.getInt("High_Score_Value", 0);
 		soundCheckBoxValue = sharedPreferences.getBoolean("Sound_CheckBox_Value", false);
 		musicCheckBoxValue = sharedPreferences.getBoolean("Music_CheckBox_Value", false);
 
 	}
 
-
+	private void savePreferences(String key, int value) {
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(this);
+		SharedPreferences.Editor editor = sharedPreferences.edit();
+		editor.putInt(key, value);
+		editor.commit();
+	}
 
 }

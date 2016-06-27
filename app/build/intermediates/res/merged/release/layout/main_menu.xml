@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_splash_screen_3"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="68dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="bottom">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/present_blue_red"
+                android:id="@+id/playPresentButton"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_column="1" />
+
+            <Button
+                android:id="@+id/newGameButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="PLAY"
+                android:textColor="#ffffff"
+                android:background="#a10023"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:layout_above="@+id/chooseLevelButton"
+                android:layout_alignLeft="@+id/chooseLevelButton"
+                android:layout_alignStart="@+id/chooseLevelButton"
+                android:layout_marginBottom="17dp"
+                android:layout_column="2"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/present_blue_yellow"
+                android:id="@+id/levelsPresentButton"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_column="1" />
+
+            <Button
+                android:id="@+id/chooseLevelButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="LEVELS"
+                android:textColor="#ffffff"
+                android:background="#a10023"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:layout_above="@+id/gameOptionsButton"
+                android:layout_alignLeft="@+id/gameOptionsButton"
+                android:layout_alignStart="@+id/gameOptionsButton"
+                android:layout_marginBottom="17dp"
+                android:layout_column="2"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/present_green_red"
+                android:id="@+id/optionsPresentButton"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_column="1" />
+
+            <Button
+                android:id="@+id/gameOptionsButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="OPTIONS"
+                android:textColor="#ffffff"
+                android:background="#a10023"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:layout_above="@+id/aboutButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="18dp"
+                android:layout_column="2"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/present_lightblue_red"
+                android:id="@+id/aboutPresentButton"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_column="1" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="ABOUT"
+                android:id="@+id/aboutButton"
+                android:textColor="#ffffff"
+                android:background="#a10023"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="19dp"
+                android:layout_column="2"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
